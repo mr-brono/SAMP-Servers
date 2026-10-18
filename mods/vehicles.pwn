@@ -1,0 +1,2 @@
+CMD:v(playerid, params[]) { new carid; if(sscanf(params,"d",carid)) return SendClientMessage(playerid,-1,"/v [400-611]"); new Float:x,Float:y,Float:z; GetPlayerPos(playerid,x,y,z); CreateVehicle(carid,x+2,y,z,0,-1,-1,500); SendClientMessage(playerid,-1,"تم انشاء السيارة!"); return 1; }
+CMD:dv(playerid) { if(!IsPlayerInAnyVehicle(playerid)) return SendClientMessage(playerid,-1,"لست في سيارة"); DestroyVehicle(GetPlayerVehicleID(playerid)); return 1; }
